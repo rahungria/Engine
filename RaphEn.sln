@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.vcxproj", "{8ABCBEE5-03C3-43C9-A93A-1D8B89190882}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RaphEn", "RaphEn\RaphEn.vcxproj", "{B4BC7945-0B9A-4007-BB58-95609BCC9F26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4BC7945-0B9A-4007-BB58-95609BCC9F26}.Debug|x64.ActiveCfg = Debug|x64
+		{B4BC7945-0B9A-4007-BB58-95609BCC9F26}.Debug|x64.Build.0 = Debug|x64
+		{B4BC7945-0B9A-4007-BB58-95609BCC9F26}.Release|x64.ActiveCfg = Release|x64
+		{B4BC7945-0B9A-4007-BB58-95609BCC9F26}.Release|x64.Build.0 = Release|x64
+		{8ABCBEE5-03C3-43C9-A93A-1D8B89190882}.Debug|x64.ActiveCfg = Debug|x64
+		{8ABCBEE5-03C3-43C9-A93A-1D8B89190882}.Debug|x64.Build.0 = Debug|x64
+		{8ABCBEE5-03C3-43C9-A93A-1D8B89190882}.Release|x64.ActiveCfg = Release|x64
+		{8ABCBEE5-03C3-43C9-A93A-1D8B89190882}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C6B7F2A-4288-4654-853D-7068B7F03D30}
+	EndGlobalSection
+EndGlobal
