@@ -16,5 +16,6 @@ public:
 //}
 
 raphen::Application* raphen::CreateApplication() {
+	raphen::debug::Log("debug log", raphen::debug::channels::RENDERING);
 	return new Sandbox;
 }

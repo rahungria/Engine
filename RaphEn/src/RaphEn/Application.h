@@ -11,7 +11,7 @@ namespace raphen {
 		void run(void);
 	};
 
-	//to be defined in Client application
+	//to be defined in Client application (see entry point)
 	Application* CreateApplication(void);
 }
 

@@ -15,9 +15,11 @@
     <ClInclude Include="src\RaphEn\Core.h" />
     <ClInclude Include="src\Raphen.h" />
     <ClInclude Include="src\RaphEn\EntryPoint.h" />
+    <ClInclude Include="src\RaphEn\Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\RaphEn\Application.cpp" />
+    <ClCompile Include="src\RaphEn\Log.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -63,8 +65,9 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>RE_BUILD_DLL;RE_PLATFORM_WINDOWS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>RE_BUILD_DLL;RE_PLATFORM_WINDOWS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)RaphEn\vendor\spdlog\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
