@@ -53,5 +53,8 @@
     <ClCompile Include="src\RaphEn\Profiler\Profiler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\RaphEn\Profiler\ProfilerTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

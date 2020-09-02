@@ -25,6 +25,7 @@
     <ClCompile Include="src\RaphEn\Application.cpp" />
     <ClCompile Include="src\RaphEn\Log.cpp" />
     <ClCompile Include="src\RaphEn\Profiler\Profiler.cpp" />
+    <ClCompile Include="src\RaphEn\Profiler\ProfilerTimer.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

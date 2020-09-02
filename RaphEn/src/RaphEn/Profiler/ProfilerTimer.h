@@ -1,42 +1,30 @@
 #pragma once
 
 #include <chrono>
+#include <string>
 #include <thread>
-#include "RaphEn/Profiler/Profiler.h"
 #include "RaphEn/Core.h"
 
 namespace raphen {
-
-	class ProfilerTimer
-	{
-	private:
-		const char* m_name;
-		bool m_stopped;
-		std::chrono::time_point<std::chrono::high_resolution_clock> m_start_timepoint;
-
-	public:
-
-		ProfilerTimer(const char* name) :
-			m_name(name), m_stopped(false)
+	namespace debug {
+		//Class instantiated by debug macros
+		//Counts the time since instantiation until it goes out of scope, accesses an ongoing profiler session and writes to it
+		class ProfilerTimer
 		{
-			m_start_timepoint = std::chrono::high_resolution_clock::now();
-		}
-		~ProfilerTimer()
-		{
-			if (!m_stopped)
-				Stop();
-		}
+		private:
+			const std::string m_name;
+			bool m_stopped;
+			std::chrono::time_point<std::chrono::high_resolution_clock> m_start_timepoint;
 
-		void Stop() {
-			auto endpoint = std::chrono::high_resolution_clock::now();
+		public:
+			//Gets current time in constructor
+			ProfilerTimer(const char* name);
 
-			long long start = std::chrono::time_point_cast<std::chrono::microseconds>(m_start_timepoint).time_since_epoch().count();
-			long long end = std::chrono::time_point_cast<std::chrono::microseconds>(endpoint).time_since_epoch().count();
+			//Stops timer on deconstructor
+			~ProfilerTimer();
 
-			uint32_t thread_id = std::hash<std::thread::id>{}(std::this_thread::get_id());
-			Profiler::Get().WriteProfile({ m_name, start, end, thread_id });
-
-			m_stopped = true;
-		}
-	};
+			//Gets end time and duration, and outputs to running profiler session
+			void Stop();
+		};
+	}
 }
