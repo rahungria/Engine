@@ -12,11 +12,14 @@
 
 	int main(int argc, char** argv) 
 	{
-		RE_PROFILE_BEGIN_SESSION("Startup", "Startup-profile.json");
+		RE_PROFILE_BEGIN_SESSION("Startup", "Startup-Profile.json");
 		raphen::Application* app = raphen::CreateApplication();
 		RE_PROFILE_END_SESSION();
-		app->run();
 
+		RE_PROFILE_BEGIN_SESSION("App Loop", "App-Loop-Profile.json");
+		app->run();
+		RE_PROFILE_END_SESSION();
+		
 		delete app;
 
 		return 0;
