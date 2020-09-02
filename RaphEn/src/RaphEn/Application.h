@@ -1,5 +1,5 @@
 #pragma once
-#include "Core.h"
+#include "RaphEn/Core.h"
 
 namespace raphen {
 

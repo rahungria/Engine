@@ -16,10 +16,15 @@
     <ClInclude Include="src\Raphen.h" />
     <ClInclude Include="src\RaphEn\EntryPoint.h" />
     <ClInclude Include="src\RaphEn\Log.h" />
+    <ClInclude Include="src\RaphEn\Profiler\Profiler.h" />
+    <ClInclude Include="src\RaphEn\Profiler\ProfilerCore.h" />
+    <ClInclude Include="src\RaphEn\Profiler\ProfileResult.h" />
+    <ClInclude Include="src\RaphEn\Profiler\ProfilerTimer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\RaphEn\Application.cpp" />
     <ClCompile Include="src\RaphEn\Log.cpp" />
+    <ClCompile Include="src\RaphEn\Profiler\Profiler.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -67,7 +72,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>RE_BUILD_DLL;RE_PLATFORM_WINDOWS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)RaphEn\vendor\spdlog\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)RaphEn\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -82,6 +87,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)RaphEn\vendor\spdlog\include;$(SolutionDir)RaphEn\src\RaphEn</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
