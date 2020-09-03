@@ -1,4 +1,5 @@
-#include "Raphen.h"
+#include "..\..\RaphEn\src\Raphen.h"
+//FIX EVERYONES PREMAKE 
 
 class Sandbox : public raphen::Application {
 public:

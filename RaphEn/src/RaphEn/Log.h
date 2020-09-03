@@ -2,7 +2,6 @@
 
 #include "RaphEn/Core.h"
 #include <string>
-//#include <cstdarg>
 
 namespace raphen {
 	namespace debug {

@@ -24,7 +24,7 @@ namespace raphen {
 			long long start = std::chrono::time_point_cast<std::chrono::microseconds>(m_start_timepoint).time_since_epoch().count();
 			long long end = std::chrono::time_point_cast<std::chrono::microseconds>(endpoint).time_since_epoch().count();
 
-			uint32_t thread_id = std::hash<std::thread::id>{}(std::this_thread::get_id());
+			uint32_t thread_id = (uint32_t)std::hash<std::thread::id>{}(std::this_thread::get_id());
 			Profiler::Get().WriteProfile({ m_name, start, end, thread_id });
 
 			m_stopped = true;

@@ -1,6 +1,6 @@
 #include "RaphEn/Profiler/Profiler.h"
 #include "RaphEn/Log.h"
-#include "ProfileResult.h"
+#include "RaphEn/Profiler/ProfileResult.h"
 #include <algorithm>
 #include <mutex>
 

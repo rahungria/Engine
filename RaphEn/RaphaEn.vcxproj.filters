@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="RaphEn">
+      <UniqueIdentifier>{637F40CE-4F21-6BA4-38DC-7EF8241DF2F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RaphEn\Profiler">
+      <UniqueIdentifier>{15A08D2D-812B-FBF1-8A3C-7EE6F64657F2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\RaphEn\Application.h">
+      <Filter>RaphEn</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RaphEn\Core.h">
+      <Filter>RaphEn</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RaphEn\EntryPoint.h">
+      <Filter>RaphEn</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RaphEn\Log.h">
+      <Filter>RaphEn</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RaphEn\Profiler\ProfileResult.h">
+      <Filter>RaphEn\Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RaphEn\Profiler\Profiler.h">
+      <Filter>RaphEn\Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RaphEn\Profiler\ProfilerCore.h">
+      <Filter>RaphEn\Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RaphEn\Profiler\ProfilerTimer.h">
+      <Filter>RaphEn\Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Raphen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\RaphEn\Application.cpp">
+      <Filter>RaphEn</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RaphEn\Log.cpp">
+      <Filter>RaphEn</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RaphEn\Profiler\Profiler.cpp">
+      <Filter>RaphEn\Profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RaphEn\Profiler\ProfilerTimer.cpp">
+      <Filter>RaphEn\Profiler</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
