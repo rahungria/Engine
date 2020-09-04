@@ -149,7 +149,9 @@
     <ClInclude Include="src\RaphEn\Application.h" />
     <ClInclude Include="src\RaphEn\Core.h" />
     <ClInclude Include="src\RaphEn\EntryPoint.h" />
+    <ClInclude Include="src\RaphEn\Events\Event.h" />
     <ClInclude Include="src\RaphEn\Events\EventCore.h" />
+    <ClInclude Include="src\RaphEn\Events\KeyEvent.h" />
     <ClInclude Include="src\RaphEn\Log.h" />
     <ClInclude Include="src\RaphEn\Profiler\ProfileResult.h" />
     <ClInclude Include="src\RaphEn\Profiler\Profiler.h" />

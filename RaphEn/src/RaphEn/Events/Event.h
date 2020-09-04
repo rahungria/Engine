@@ -15,6 +15,7 @@ namespace raphen::events
 		virtual const char* GetName() const = 0;
 		virtual const char* ToString() const { return GetName(); }
 
+#		pragma warning(suppress : 26812)
 		inline bool IsInCategory(EventCategory category)
 		{
 			return GetCategoryFlags() & category;
