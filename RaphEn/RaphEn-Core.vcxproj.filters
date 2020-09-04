@@ -37,9 +37,7 @@
       <Filter>RaphEn\Profiler</Filter>
     </ClInclude>
     <ClInclude Include="src\Raphen.h" />
-    <ClInclude Include="EventCore.h">
-      <Filter>RaphEn\Events</Filter>
-    </ClInclude>
+    <ClInclude Include="src\RaphEn\Events\EventCore.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\RaphEn\Application.cpp">
