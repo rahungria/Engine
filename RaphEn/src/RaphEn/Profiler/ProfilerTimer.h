@@ -5,26 +5,25 @@
 #include <string>
 #include <thread>
 
-namespace raphen {
-	namespace debug {
-		//Class instantiated by debug macros
-		//Counts the time since instantiation until it goes out of scope, accesses an ongoing profiler session and writes to it
-		class ProfilerTimer
-		{
-		private:
-			const std::string m_name;
-			bool m_stopped;
-			std::chrono::time_point<std::chrono::high_resolution_clock> m_start_timepoint;
+namespace raphen::debug {
 
-		public:
-			//Gets current time in constructor
-			ProfilerTimer(const char* name);
+	//Class instantiated by debug macros
+	//Counts the time since instantiation until it goes out of scope, accesses an ongoing profiler session and writes to it
+	class ProfilerTimer
+	{
+	private:
+		const std::string m_name;
+		bool m_stopped;
+		std::chrono::time_point<std::chrono::high_resolution_clock> m_start_timepoint;
 
-			//Stops timer on deconstructor
-			~ProfilerTimer();
+	public:
+		//Gets current time in constructor
+		ProfilerTimer(const char* name);
 
-			//Gets end time and duration, and outputs to running profiler session
-			void Stop();
-		};
-	}
+		//Stops timer on deconstructor
+		~ProfilerTimer();
+
+		//Gets end time and duration, and outputs to running profiler session
+		void Stop();
+	};
 }

@@ -7,6 +7,9 @@
     <Filter Include="RaphEn\Profiler">
       <UniqueIdentifier>{15A08D2D-812B-FBF1-8A3C-7EE6F64657F2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RaphEn\Events">
+      <UniqueIdentifier>{582f7fcb-2fd7-4c89-956b-64230f968b0e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\RaphEn\Application.h">
@@ -34,6 +37,9 @@
       <Filter>RaphEn\Profiler</Filter>
     </ClInclude>
     <ClInclude Include="src\Raphen.h" />
+    <ClInclude Include="EventCore.h">
+      <Filter>RaphEn\Events</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\RaphEn\Application.cpp">
