@@ -10,9 +10,9 @@
 #include "RaphEn/Profiler/Profiler.h"
 #include "RaphEn/Profiler/ProfilerTimer.h"
 
-#define PROFILING 1
+//#define PROFILING 1
 
-#if PROFILING
+#if HZ_DEBUG
 	#define RE_PROFILE_BEGIN_SESSION(name, filepath) ::raphen::debug::Profiler::Get().BeginSession(name, filepath)
 	#define RE_PROFILE_END_SESSION() ::raphen::debug::Profiler::Get().EndSession()
 	#define PROFILE_SCOPE(name) ::raphen::debug::ProfilerTimer timer##__LINE__(name)
@@ -22,5 +22,4 @@
 	#define RE_PROFILE_END_SESSION()
 	#define PROFILE_SCOPE(name)  
 	#define PROFILE_FUNCTION()  
-
 #endif

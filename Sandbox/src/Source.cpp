@@ -1,11 +1,10 @@
-#include "..\..\RaphEn\src\Raphen.h"
+#include "Raphen.h"
 //FIX EVERYONES PREMAKE 
 
 class Sandbox : public raphen::Application {
 public:
 	Sandbox(void){}
 	~Sandbox(void){}
-
 };
 
 //replaced by entry point header

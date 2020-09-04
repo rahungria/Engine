@@ -1,9 +1,9 @@
 #pragma once
 
+#include "RaphEn/Core.h"
 #include <chrono>
 #include <string>
 #include <thread>
-#include "RaphEn/Core.h"
 
 namespace raphen {
 	namespace debug {

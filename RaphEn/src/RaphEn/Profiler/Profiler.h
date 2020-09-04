@@ -1,12 +1,11 @@
 #pragma once
 
-#include <string>
-#include <fstream>
-#include <mutex>
 #include "RaphEn/Profiler/ProfileResult.h"
 #include "RaphEn/Profiler/ProfilerTimer.h"
 #include "RaphEn/Core.h"
-
+#include <string>
+#include <fstream>
+#include <mutex>
 
 namespace raphen {
 	namespace debug {
