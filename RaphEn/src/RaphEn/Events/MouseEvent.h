@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RaphEn/Core.h"
-#include "RaphEn/Events/EventCore.h"
+#include "RaphEn/Core/Core.h"
+#include "RaphEn/Core/EventCore.h"
 #include "RaphEn/Events/Event.h"
 #include <sstream>
 

@@ -1,1 +1,1 @@
-{"otherData": {},"traceEvents":[{"cat":"function","dur":5280935,"name":"void __cdecl raphen::Application::run(void)","ph":"X","pid":0,"tid":384485245,"ts":39633868863}]}
+{"otherData": {},"traceEvents":[{"cat":"function","dur":10225736,"name":"void __cdecl raphen::Application::run(void)","ph":"X","pid":0,"tid":692878091,"ts":44190940235}]}

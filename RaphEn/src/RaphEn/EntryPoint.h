@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RaphEn/Core.h"
-#include "RaphEn/Profiler/ProfilerCore.h"
+#include "RaphEn/Core/Core.h"
+#include "RaphEn/Core/ProfilerCore.h"
 
 #ifdef RE_PLATFORM_WINDOWS
 

@@ -1,5 +1,5 @@
 #include "RaphEn/Application.h"
-#include "Profiler/ProfilerCore.h"
+#include "RaphEn/Core/ProfilerCore.h"
 #include <iostream>
 
 namespace raphen {

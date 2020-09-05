@@ -2,7 +2,7 @@
 
 #include "RaphEn/Profiler/ProfileResult.h"
 #include "RaphEn/Profiler/ProfilerTimer.h"
-#include "RaphEn/Core.h"
+#include "RaphEn/Core/Core.h"
 #include <string>
 #include <fstream>
 #include <mutex>

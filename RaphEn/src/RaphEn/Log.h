@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RaphEn/Core.h"
+#include "RaphEn/Core/Core.h"
 #include <string>
 
 namespace raphen {

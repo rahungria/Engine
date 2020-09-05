@@ -4,7 +4,7 @@
 
 #include "RaphEn/Application.h"
 #include "RaphEn/Log.h"
-#include "RaphEn/Profiler/ProfilerCore.h"
+#include "RaphEn/Core/ProfilerCore.h"
 
 // --------- ENTRY POINT ---------------
 #include "RaphEn/EntryPoint.h"
