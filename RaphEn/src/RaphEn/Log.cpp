@@ -9,6 +9,8 @@ namespace raphen {
 
 		std::stringstream* getFormatedLocalTime() {
 			time_t now = time(0);
+
+#			pragma warning (suppress : 4996)
 			tm* ltm = localtime(&now);
 
 			std::stringstream* ss = new std::stringstream;
@@ -24,6 +26,8 @@ namespace raphen {
 		void RE_API Log(const std::string& msg, const channels& channel) {
 			
 			time_t now = time(0);
+
+#			pragma warning (suppress : 4996)
 			tm* ltm = localtime(&now);
 			
 			std::stringstream* s = getFormatedLocalTime();

@@ -2,6 +2,7 @@
 
 #include "RaphEn/Core.h"
 #include "RaphEn/Events/EventCore.h"
+#include <string>
 
 namespace raphen::events 
 {
@@ -13,7 +14,7 @@ namespace raphen::events
 		virtual EventType GetEventType() const = 0;
 		virtual int GetCategoryFlags() const = 0;
 		virtual const char* GetName() const = 0;
-		virtual const char* ToString() const { return GetName(); }
+		virtual std::string ToString() const { return GetName(); }
 
 #		pragma warning(suppress : 26812)
 		inline bool IsInCategory(EventCategory category)
