@@ -11,7 +11,7 @@ namespace raphen::events {
 		WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
 		AppTick, AppUpdate, AppRender,
 		KeyDown, KeyUp,
-		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
+		MouseButtonDown, MouseButtonUp, MouseMoved, MouseScrolled
 	};
 
 	//bit flag for event category

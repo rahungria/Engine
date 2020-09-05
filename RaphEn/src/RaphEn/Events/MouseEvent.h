@@ -30,8 +30,35 @@ namespace raphen::events
 		double m_mouse_x, m_mouse_y;
 	};
 
+	//Holds just the coordinates of the movement
 	class RE_API MouseMovedEvent : MouseEvent
 	{
+	public:
+		MouseMovedEvent(double x, double y) :
+			MouseEvent(x,y) {}
 
+		EVENT_CLASS_TYPE(MouseMoved)
+	};
+
+	class RE_API MouseScrolledEvent : MouseEvent
+	{
+	public:
+		MouseScrolledEvent(double x, double y, double _x_offset, double _y_offset)
+			:MouseEvent(x,y) , x_offset(_x_offset), y_offset(_y_offset) {}
+
+		inline double GetXOffset() { return x_offset; }
+		inline double GetYOffset() { return y_offset; }
+
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "MouseScrolledEvent: offset (" << x_offset << "," << y_offset << ")";
+			return ss.str();
+		}
+
+		EVENT_CLASS_TYPE(MouseScrolled)
+
+	private:
+		double x_offset, y_offset;
 	};
 }
