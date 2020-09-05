@@ -16,6 +16,12 @@ namespace raphen::events
 		virtual const char* GetName() const = 0;
 		virtual std::string ToString() const { return GetName(); }
 
+		inline std::ostream& operator << (std::ostream& os)
+		{
+			return os << this->ToString();
+			return os;
+		}
+
 #		pragma warning(suppress : 26812)
 		inline bool IsInCategory(EventCategory category)
 		{
