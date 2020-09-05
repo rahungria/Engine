@@ -42,6 +42,8 @@
     <ClInclude Include="src\RaphEn\Core\Core.h">
       <Filter>RaphEn</Filter>
     </ClInclude>
+    <ClInclude Include="src\RaphEn\Events\WindowEvent.h" />
+    <ClInclude Include="src\RaphEn\Events\ApplicationEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\RaphEn\Application.cpp">

@@ -8,7 +8,7 @@ namespace raphen::events {
 	enum class EventType
 	{
 		None = 0,
-		WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
+		WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved, //focus, lost focus, moved NOT IMPLEMENTED
 		AppTick, AppUpdate, AppRender,
 		KeyDown, KeyUp,
 		MouseButtonDown, MouseButtonUp, MouseMoved, MouseScrolled
@@ -19,10 +19,11 @@ namespace raphen::events {
 	{
 		None = 0,
 		EventCategoryApplication =	BIT(0),
-		EventCategoryInput =		BIT(1),
-		EventCategoryKeyboard =		BIT(2),
-		EventCategoryMouse =		BIT(3),
-		EventCategoryMouseButton =	BIT(4)
+		EventCategoryWindow =		BIT(1),
+		EventCategoryInput =		BIT(2),
+		EventCategoryKeyboard =		BIT(3),
+		EventCategoryMouse =		BIT(4),
+		EventCategoryMouseButton =	BIT(5)
 	};
 }
 
