@@ -1,5 +1,6 @@
 #include "Raphen.h"
-//FIX EVERYONES PREMAKE 
+#include "RaphEn/Core/EventCore.h"
+#include <string>
 
 class Sandbox : public raphen::Application {
 public:
@@ -16,6 +17,7 @@ public:
 //}
 
 raphen::Application* raphen::CreateApplication() {
-	raphen::debug::Log("debug log", raphen::debug::channels::RENDERING);
+	raphen::events::WindowResizeEvent evnt(400, 500);
+	raphen::debug::Log<std::string>("debug log", raphen::debug::channels::RENDERING);
 	return new Sandbox;
 }

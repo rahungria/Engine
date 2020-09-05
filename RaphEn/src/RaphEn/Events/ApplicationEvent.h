@@ -3,6 +3,8 @@
 #include "RaphEn/Core/Core.h"
 #include "RaphEn/Core/EventCore.h"
 #include "RaphEn/Events/Event.h"
+#include <string>
+
 
 namespace raphen::events
 {

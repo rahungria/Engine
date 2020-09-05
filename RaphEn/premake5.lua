@@ -26,7 +26,8 @@ project "RaphEn-Core"
     }
 
     postbuildcommands {
-        "{COPY} %{cfg.buildtarget.relpath} ../bin/" .. out_dir .. "/Sandbox/"
+        "{COPY} %{cfg.buildtarget.relpath} ../bin/" .. out_dir .. "/Sandbox/",
+        "{COPY} ../bin/" .. out_dir ..  "/%{prj.name}/%{prj.name}.lib ../bin/" .. out_dir .. "/Sandbox/"
     }
     postbuildmessage "Copying .dll dependencies"
 

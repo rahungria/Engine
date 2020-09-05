@@ -23,7 +23,10 @@ namespace raphen {
 			return ss;
 		}
 
-		void RE_API Log(const std::string& msg, const channels& channel) {
+		template RE_API void Log<std::string>(const std::string&, const channels&);
+
+		template<typename T>
+		void RE_API Log(const T& msg, const channels& channel) {
 			
 			time_t now = time(0);
 

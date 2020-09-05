@@ -91,7 +91,8 @@
       <ImportLibrary>..\bin\Debug-windows-x86_64\RaphEn-Core\RaphEn-Core.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-windows-x86_64\RaphEn-Core\RaphEn-Core.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\RaphEn-Core\RaphEn-Core.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\RaphEn-Core\RaphEn-Core.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Debug-windows-x86_64\RaphEn-Core\RaphEn-Core.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\RaphEn-Core\RaphEn-Core.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\RaphEn-Core\RaphEn-Core.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)
+IF EXIST ..\bin\Debug-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\$(ProjectName)\$(ProjectName).lib ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\$(ProjectName)\$(ProjectName).lib ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)</Command>
       <Message>Copying .dll dependencies</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -116,7 +117,8 @@
       <ImportLibrary>..\bin\Release-windows-x86_64\RaphEn-Core\RaphEn-Core.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-windows-x86_64\RaphEn-Core\RaphEn-Core.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\RaphEn-Core\RaphEn-Core.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\RaphEn-Core\RaphEn-Core.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Release-windows-x86_64\RaphEn-Core\RaphEn-Core.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\RaphEn-Core\RaphEn-Core.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\RaphEn-Core\RaphEn-Core.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul)
+IF EXIST ..\bin\Release-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\$(ProjectName)\$(ProjectName).lib ..\bin\Release-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\$(ProjectName)\$(ProjectName).lib ..\bin\Release-windows-x86_64\Sandbox &gt; nul)</Command>
       <Message>Copying .dll dependencies</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -141,17 +143,19 @@
       <ImportLibrary>..\bin\Dist-windows-x86_64\RaphEn-Core\RaphEn-Core.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Dist-windows-x86_64\RaphEn-Core\RaphEn-Core.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\RaphEn-Core\RaphEn-Core.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\RaphEn-Core\RaphEn-Core.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Dist-windows-x86_64\RaphEn-Core\RaphEn-Core.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\RaphEn-Core\RaphEn-Core.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\RaphEn-Core\RaphEn-Core.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul)
+IF EXIST ..\bin\Dist-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\$(ProjectName)\$(ProjectName).lib ..\bin\Dist-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\$(ProjectName)\$(ProjectName).lib ..\bin\Dist-windows-x86_64\Sandbox &gt; nul)</Command>
       <Message>Copying .dll dependencies</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\RaphEn\Application.h" />
     <ClInclude Include="src\RaphEn\Core\Core.h" />
+    <ClInclude Include="src\RaphEn\Core\EventCore.h" />
+    <ClInclude Include="src\RaphEn\Core\ProfilerCore.h" />
     <ClInclude Include="src\RaphEn\EntryPoint.h" />
     <ClInclude Include="src\RaphEn\Events\ApplicationEvent.h" />
     <ClInclude Include="src\RaphEn\Events\Event.h" />
-    <ClInclude Include="src\RaphEn\Core\EventCore.h" />
     <ClInclude Include="src\RaphEn\Events\EventDispatcher.h" />
     <ClInclude Include="src\RaphEn\Events\KeyEvent.h" />
     <ClInclude Include="src\RaphEn\Events\MouseEvent.h" />
@@ -159,7 +163,6 @@
     <ClInclude Include="src\RaphEn\Log.h" />
     <ClInclude Include="src\RaphEn\Profiler\ProfileResult.h" />
     <ClInclude Include="src\RaphEn\Profiler\Profiler.h" />
-    <ClInclude Include="src\RaphEn\Core\ProfilerCore.h" />
     <ClInclude Include="src\RaphEn\Profiler\ProfilerTimer.h" />
     <ClInclude Include="src\Raphen.h" />
   </ItemGroup>
@@ -168,6 +171,7 @@
     <ClCompile Include="src\RaphEn\Log.cpp" />
     <ClCompile Include="src\RaphEn\Profiler\Profiler.cpp" />
     <ClCompile Include="src\RaphEn\Profiler\ProfilerTimer.cpp" />
+    <ClCompile Include="WindowEvent.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

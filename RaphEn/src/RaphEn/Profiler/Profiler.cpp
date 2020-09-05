@@ -8,14 +8,14 @@ namespace raphen::debug {
 
     void Profiler::BeginSession(const std::string& name, const std::string& filepath)
     {
-        raphen::debug::Log("Begining profile session", raphen::debug::channels::CORE);
+        //raphen::debug::Log<std::string>("Begining profile session", raphen::debug::channels::CORE);
         m_output_stream.open(filepath);
         Profiler::WriteHeader();
         m_current_session = name;
     }
     void Profiler::EndSession()
     {
-        raphen::debug::Log("Ending profile session");
+        //raphen::debug::Log<std::string>("Ending profile session");
         WriteFooter();
         m_output_stream.close();
         m_profile_count = 0;
