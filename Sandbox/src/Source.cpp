@@ -18,6 +18,6 @@ public:
 
 raphen::Application* raphen::CreateApplication() {
 	//raphen::events::WindowResizeEvent evnt(400, 500);
-	raphen::debug::Log<std::string>("debug log", raphen::debug::channels::RENDERING);
+	raphen::debug::Log("debug log", raphen::debug::channels::RENDERING);
 	return new Sandbox;
 }

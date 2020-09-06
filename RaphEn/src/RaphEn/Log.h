@@ -10,11 +10,17 @@ namespace raphen {
 			CORE = 0, RENDERING = 1, PHYSICS = 2
 		};
 
-		const char* const kChannels[] = { "CORE", "EVENT", "RENDERING", "PHYSICS" };
+		const char* const k_channels[] = { "CORE", "EVENT", "RENDERING", "PHYSICS" };
 
-		std::stringstream* getFormatedLocalTime();
-		//void RE_API Log(const std::string& msg, const channels& channel = channels::CORE);
+		std::stringstream getFormatedLocalTime();
+
+		// API ver of log function
+		void RE_API Log(const char* msg, const channels& channel = channels::CORE);
+
+		// template for internal DLL logging purposes 
+		// REQUIRES T TO IMPLEMENT << OPERATOR
+		// NOT THREAD SAFE (T&)
 		template<typename T>
-		void RE_API Log(const T& msg, const channels& channel = channels::CORE);
+		void log_internal(const T&, const channels& channel = channels::CORE);
 	}
 }
