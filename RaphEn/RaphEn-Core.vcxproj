@@ -149,6 +149,7 @@ IF EXIST ..\bin\Dist-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy /Q
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\RaphEn\Events\EventType.h" />
     <ClInclude Include="src\RaphEn\Application.h" />
     <ClInclude Include="src\RaphEn\Core\Core.h" />
     <ClInclude Include="src\RaphEn\Core\EventCore.h" />
@@ -167,11 +168,14 @@ IF EXIST ..\bin\Dist-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy /Q
     <ClInclude Include="src\Raphen.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\RaphEn\Events\ApplicationEvent.cpp" />
+    <ClCompile Include="src\RaphEn\Events\KeyEvent.cpp" />
+    <ClCompile Include="src\RaphEn\Events\MouseEvent.cpp" />
     <ClCompile Include="src\RaphEn\Application.cpp" />
     <ClCompile Include="src\RaphEn\Log.cpp" />
     <ClCompile Include="src\RaphEn\Profiler\Profiler.cpp" />
     <ClCompile Include="src\RaphEn\Profiler\ProfilerTimer.cpp" />
-    <ClCompile Include="WindowEvent.cpp" />
+    <ClCompile Include="src\RaphEn\Events\WindowEvent.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

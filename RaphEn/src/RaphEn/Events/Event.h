@@ -1,8 +1,10 @@
 #pragma once
 
 #include "RaphEn/Core/Core.h"
-#include "RaphEn/Core/EventCore.h"
+#include "RaphEn/Events/EventType.h"
 #include <string>
+
+
 
 namespace raphen::events 
 {
@@ -12,7 +14,7 @@ namespace raphen::events
 		//friend class EventDispatcher;
 	public:
 		virtual EventType GetEventType() const = 0;
-		virtual int GetCategoryFlags() const = 0;
+		virtual unsigned int GetCategoryFlags() const = 0;
 		virtual const char* GetName() const = 0;
 		virtual std::string ToString() const { return GetName(); }
 

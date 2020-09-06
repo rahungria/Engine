@@ -1,12 +1,14 @@
 #pragma once
 
 #include "RaphEn/Core/Core.h"
-#include "RaphEn/Core/EventCore.h"
 #include "RaphEn/Events/Event.h"
+#include "RaphEn/Events/EventType.h"
 #include <sstream>
 
 namespace raphen::events
 {
+	enum class EventType;
+	enum EventCategory;
 
 	class RE_API WindowResizeEvent : public Event
 	{
@@ -18,8 +20,11 @@ namespace raphen::events
 
 		std::string ToString() const override;
 
-		EVENT_CLASS_CATEGORY(EventCategoryWindow)
-		EVENT_CLASS_TYPE(WindowResize)
+		static EventType GetStaticType();
+		virtual EventType GetEventType() const override;
+		virtual const char* GetName() const override;
+
+		virtual unsigned int GetCategoryFlags() const override;
 	protected:
 		unsigned int m_height, m_width;
 	};
@@ -31,7 +36,10 @@ namespace raphen::events
 
 		std::string ToString() const override;
 
-		EVENT_CLASS_CATEGORY(EventCategoryWindow)
-		EVENT_CLASS_TYPE(WindowClose)
+		static EventType GetStaticType();
+		virtual EventType GetEventType() const override;
+		virtual const char* GetName() const override;
+
+		virtual unsigned int GetCategoryFlags() const override;
 	};
 }

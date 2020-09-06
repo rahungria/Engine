@@ -61,6 +61,9 @@
       <Filter>RaphEn\Profiler</Filter>
     </ClInclude>
     <ClInclude Include="src\Raphen.h" />
+    <ClInclude Include="src\RaphEn\Events\EventType.h">
+      <Filter>RaphEn\Events</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\RaphEn\Application.cpp">
@@ -75,7 +78,16 @@
     <ClCompile Include="src\RaphEn\Profiler\ProfilerTimer.cpp">
       <Filter>RaphEn\Profiler</Filter>
     </ClCompile>
-    <ClCompile Include="WindowEvent.cpp">
+    <ClCompile Include="src\RaphEn\Events\MouseEvent.cpp">
+      <Filter>RaphEn\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RaphEn\Events\KeyEvent.cpp">
+      <Filter>RaphEn\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RaphEn\Events\ApplicationEvent.cpp">
+      <Filter>RaphEn\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RaphEn\Events\WindowEvent.cpp">
       <Filter>RaphEn\Events</Filter>
     </ClCompile>
   </ItemGroup>

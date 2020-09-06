@@ -1,19 +1,19 @@
 #pragma once
 
 #include "RaphEn/Events/Event.h"
+#include "RaphEn/Events/EventType.h"
 #include "RaphEn/Core/Core.h"
-#include <sstream>
 
 namespace raphen::events
 {
-	class KeyEvent : public Event
+	class RE_API KeyEvent : public Event
 	{
 	public:
-		inline unsigned int GetKeyCode() const { return m_key_code; }
-		EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput);
+		inline unsigned int GetKeyCode() const;
+		virtual unsigned int GetCategoryFlags() const override;
+
 	protected:
-		KeyEvent(unsigned int key_code) :
-			m_key_code(key_code) {};
+		KeyEvent(unsigned int key_code);
 
 		unsigned int m_key_code;
 	};
@@ -21,19 +21,15 @@ namespace raphen::events
 	class RE_API KeyDownEvent : public KeyEvent
 	{
 	public:
-		KeyDownEvent(unsigned int key_code, unsigned int repeat_count) :
-			KeyEvent(key_code), m_repeat_count(repeat_count) {}
+		KeyDownEvent(unsigned int key_code, unsigned int repeat_count);
 
-		inline unsigned int GetRepeatCount() const { return m_repeat_count; }
+		inline unsigned int GetRepeatCount() const;
 
-		EVENT_CLASS_TYPE(KeyDown)
+		static EventType GetStaticType();
+		virtual EventType GetEventType() const override;
+		virtual const char* GetName() const override;
 
-		std::string ToString() const override
-		{
-			std::stringstream ss;
-			ss << "KeyDownEvent: " << m_key_code << "(" << m_repeat_count << " repeats)";
-			return ss.str();
-		}
+		std::string ToString() const override;
 
 	private:
 		unsigned int m_repeat_count;
@@ -42,16 +38,12 @@ namespace raphen::events
 	class RE_API KeyUpEvent : public KeyEvent
 	{
 	public:
-		KeyUpEvent(unsigned int key_code) :
-			KeyEvent (key_code) {}
+		KeyUpEvent(unsigned int key_code);
 
-		std::string ToString() const override
-		{
-			std::stringstream ss;
-			ss << "KeyUpEvent: " << m_key_code << std::endl;
-			return ss.str();
-		}
+		std::string ToString() const override;
 
-		EVENT_CLASS_TYPE(KeyUp)
+		static EventType GetStaticType();
+		virtual EventType GetEventType() const override;
+		virtual const char* GetName() const override;
 	};
 }

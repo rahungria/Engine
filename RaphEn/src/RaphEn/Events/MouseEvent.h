@@ -1,31 +1,24 @@
 #pragma once
 
 #include "RaphEn/Core/Core.h"
-#include "RaphEn/Core/EventCore.h"
+#include "RaphEn/Events/EventType.h"
 #include "RaphEn/Events/Event.h"
-#include <sstream>
 
 namespace raphen::events
 {
 	// base class for any Mouse Events (mouse moved, click, scroll, etc)
-	class MouseEvent : public Event
+	class RE_API MouseEvent : public Event
 	{
 	public:
-		std::string ToString() const override
-		{
-			std::stringstream ss;
-			ss << "MouseEvent: (" << m_mouse_x << "," << m_mouse_y << ")";
-			return ss.str();
-		}
+		std::string ToString() const;
 
-		inline double GetX() const { return m_mouse_x; }
-		inline double GetY() const { return m_mouse_y; }
+		inline double GetX() const;
+		inline double GetY() const;
 
-		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
+		virtual unsigned int GetCategoryFlags() const override;
 
 	protected:
-		MouseEvent (double x, double y)
-			: m_mouse_x(x) , m_mouse_y (y) {}
+		MouseEvent(double x, double y);
 
 		double m_mouse_x, m_mouse_y;
 	};
@@ -34,46 +27,41 @@ namespace raphen::events
 	class RE_API MouseMovedEvent : public MouseEvent
 	{
 	public:
-		MouseMovedEvent(double x, double y) :
-			MouseEvent(x,y) {}
+		MouseMovedEvent(double x, double y);
 
-		EVENT_CLASS_TYPE(MouseMoved)
+		static EventType GetStaticType();
+		virtual EventType GetEventType() const override;
+		virtual const char* GetName() const override;
 	};
 
 
 	class RE_API MouseScrolledEvent : public MouseEvent
 	{
 	public:
-		MouseScrolledEvent(double x, double y, double _x_offset, double _y_offset)
-			:MouseEvent(x,y) , x_offset(_x_offset), y_offset(_y_offset) {}
+		MouseScrolledEvent(double x, double y, double _x_offset, double _y_offset);
 
-		inline double GetXOffset() const { return x_offset; }
-		inline double GetYOffset() const { return y_offset; }
+		inline double GetXOffset() const;
+		inline double GetYOffset() const;
 
-		std::string ToString() const override
-		{
-			std::stringstream ss;
-			ss << "MouseScrolledEvent: offset (" << x_offset << "," << y_offset << ")";
-			return ss.str();
-		}
+		std::string ToString() const override;
 
-		EVENT_CLASS_TYPE(MouseScrolled)
+		static EventType GetStaticType();
+		virtual EventType GetEventType() const override;
+		virtual const char* GetName() const override;
 
-	private:
-		double x_offset, y_offset;
+	protected:
+		double m_x_offset, m_y_offset;
 	};
 
 
 	class RE_API MouseButtonEvent : public MouseEvent
 	{
 	public:
-		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput | EventCategoryMouseButton)
+		virtual inline unsigned int GetMouseButton() const;
 
-		inline unsigned int GetMouseButton() const { return m_mouse_button; }
-
+		virtual unsigned int GetCategoryFlags() const override;
 	protected:
-		MouseButtonEvent (double x, double y, unsigned int button) :
-			MouseEvent(x,y), m_mouse_button(button) {}
+		MouseButtonEvent(double x, double y, unsigned int button);
 
 	protected:
 		unsigned int m_mouse_button;
@@ -83,32 +71,24 @@ namespace raphen::events
 	class RE_API MouseButtonDownEvent : public MouseButtonEvent
 	{
 	public:
-		MouseButtonDownEvent(double x, double y, unsigned int button) :
-			MouseButtonEvent(x,y,button) {}
+		MouseButtonDownEvent(double x, double y, unsigned int button);
 
-		std::string ToString() const override
-		{
-			std::stringstream ss;
-			ss << "MouseButtonDownEvent: (" << m_mouse_x << "," << m_mouse_y << "), button: " << m_mouse_button;
-			return ss.str();
-		}
+		std::string ToString() const override;
 
-		EVENT_CLASS_TYPE(MouseButtonDown)
+		static EventType GetStaticType();
+		virtual EventType GetEventType() const override;
+		virtual const char* GetName() const override;
 	};
 
 	class RE_API MouseButtonUpEvent : public MouseButtonEvent
 	{
 	public:
-		MouseButtonUpEvent(double x, double y, unsigned int button) :
-			MouseButtonEvent(x, y, button) {}
+		MouseButtonUpEvent(double x, double y, unsigned int button);
 
-		std::string ToString() const override
-		{
-			std::stringstream ss;
-			ss << "MouseButtonUpEvent: (" << m_mouse_x << "," << m_mouse_y << "), button: " << m_mouse_button;
-			return ss.str();
-		}
+		std::string ToString() const override;
 
-		EVENT_CLASS_TYPE(MouseButtonUp)
+		static EventType GetStaticType();
+		virtual EventType GetEventType() const override;
+		virtual const char* GetName() const override;
 	};
 }
