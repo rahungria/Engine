@@ -7,6 +7,9 @@ project "RaphEn-Core"
     targetdir ("../bin/" .. out_dir ..  "/%{prj.name}")
     objdir ("../bin-int/" .. out_dir .. "/%{prj.name}")
 
+    pchheader "repch.h"
+    pchsource "src/repch.cpp"
+
     files {
         "src/**.h",
         "src/**.cpp"

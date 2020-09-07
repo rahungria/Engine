@@ -2,13 +2,10 @@
 
 #include "RaphEn/Core/Core.h"
 #include "RaphEn/Events/EventType.h"
-#include <string>
-
-
 
 namespace raphen::events 
 {
-	//Base class for every system event
+	//Base Abstract class for every system event
 	class RE_API Event
 	{
 		//friend class EventDispatcher;
@@ -18,6 +15,7 @@ namespace raphen::events
 		virtual const char* GetName() const = 0;
 		virtual std::string ToString() const { return GetName(); }
 
+		//for logging
 		inline std::ostream& operator << (std::ostream& os)
 		{
 			return os << this->ToString();

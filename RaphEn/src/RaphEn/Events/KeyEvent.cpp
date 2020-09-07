@@ -1,6 +1,7 @@
+#include "repch.h"
+
 #include "RaphEn/Events/KeyEvent.h"
-#include <sstream>
-#include <string>
+
 
 namespace raphen::events
 {

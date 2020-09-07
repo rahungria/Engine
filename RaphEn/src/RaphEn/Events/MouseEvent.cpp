@@ -1,7 +1,7 @@
+#include "repch.h"
+
 #include "RaphEn/Events/MouseEvent.h"
 #include "RaphEn/Events/EventType.h"
-#include <string>
-#include <sstream>
 
 namespace raphen::events
 {

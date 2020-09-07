@@ -1,7 +1,7 @@
+#include "repch.h"
+
 #include "RaphEn/Events/ApplicationEvent.h"
 #include "RaphEn/Events/EventType.h"
-#include <sstream>
-#include <string>
 
 namespace raphen::events
 {

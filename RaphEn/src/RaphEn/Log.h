@@ -1,7 +1,8 @@
 #pragma once
 
+#include "repch.h"
+
 #include "RaphEn/Core/Core.h"
-#include <string>
 
 namespace raphen {
 	namespace debug {

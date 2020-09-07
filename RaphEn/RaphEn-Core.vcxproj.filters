@@ -39,6 +39,9 @@
     <ClInclude Include="src\RaphEn\Events\EventDispatcher.h">
       <Filter>RaphEn\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\RaphEn\Events\EventType.h">
+      <Filter>RaphEn\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\RaphEn\Events\KeyEvent.h">
       <Filter>RaphEn\Events</Filter>
     </ClInclude>
@@ -61,13 +64,23 @@
       <Filter>RaphEn\Profiler</Filter>
     </ClInclude>
     <ClInclude Include="src\Raphen.h" />
-    <ClInclude Include="src\RaphEn\Events\EventType.h">
-      <Filter>RaphEn\Events</Filter>
-    </ClInclude>
+    <ClInclude Include="src\repch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\RaphEn\Application.cpp">
       <Filter>RaphEn</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RaphEn\Events\ApplicationEvent.cpp">
+      <Filter>RaphEn\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RaphEn\Events\KeyEvent.cpp">
+      <Filter>RaphEn\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RaphEn\Events\MouseEvent.cpp">
+      <Filter>RaphEn\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RaphEn\Events\WindowEvent.cpp">
+      <Filter>RaphEn\Events</Filter>
     </ClCompile>
     <ClCompile Include="src\RaphEn\Log.cpp">
       <Filter>RaphEn</Filter>
@@ -78,17 +91,6 @@
     <ClCompile Include="src\RaphEn\Profiler\ProfilerTimer.cpp">
       <Filter>RaphEn\Profiler</Filter>
     </ClCompile>
-    <ClCompile Include="src\RaphEn\Events\MouseEvent.cpp">
-      <Filter>RaphEn\Events</Filter>
-    </ClCompile>
-    <ClCompile Include="src\RaphEn\Events\KeyEvent.cpp">
-      <Filter>RaphEn\Events</Filter>
-    </ClCompile>
-    <ClCompile Include="src\RaphEn\Events\ApplicationEvent.cpp">
-      <Filter>RaphEn\Events</Filter>
-    </ClCompile>
-    <ClCompile Include="src\RaphEn\Events\WindowEvent.cpp">
-      <Filter>RaphEn\Events</Filter>
-    </ClCompile>
+    <ClCompile Include="src\repch.cpp" />
   </ItemGroup>
 </Project>

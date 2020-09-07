@@ -76,7 +76,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>repch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>RE_BUILD_DLL;RE_PLATFORM_WINDOWS;HZ_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -98,7 +99,8 @@ IF EXIST ..\bin\Debug-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy /
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>repch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>RE_BUILD_DLL;RE_PLATFORM_WINDOWS;HZ_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -124,7 +126,8 @@ IF EXIST ..\bin\Release-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>repch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>RE_BUILD_DLL;RE_PLATFORM_WINDOWS;HZ_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -149,7 +152,6 @@ IF EXIST ..\bin\Dist-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy /Q
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\RaphEn\Events\EventType.h" />
     <ClInclude Include="src\RaphEn\Application.h" />
     <ClInclude Include="src\RaphEn\Core\Core.h" />
     <ClInclude Include="src\RaphEn\Core\EventCore.h" />
@@ -158,6 +160,7 @@ IF EXIST ..\bin\Dist-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy /Q
     <ClInclude Include="src\RaphEn\Events\ApplicationEvent.h" />
     <ClInclude Include="src\RaphEn\Events\Event.h" />
     <ClInclude Include="src\RaphEn\Events\EventDispatcher.h" />
+    <ClInclude Include="src\RaphEn\Events\EventType.h" />
     <ClInclude Include="src\RaphEn\Events\KeyEvent.h" />
     <ClInclude Include="src\RaphEn\Events\MouseEvent.h" />
     <ClInclude Include="src\RaphEn\Events\WindowEvent.h" />
@@ -166,16 +169,20 @@ IF EXIST ..\bin\Dist-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy /Q
     <ClInclude Include="src\RaphEn\Profiler\Profiler.h" />
     <ClInclude Include="src\RaphEn\Profiler\ProfilerTimer.h" />
     <ClInclude Include="src\Raphen.h" />
+    <ClInclude Include="src\repch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\RaphEn\Application.cpp" />
     <ClCompile Include="src\RaphEn\Events\ApplicationEvent.cpp" />
     <ClCompile Include="src\RaphEn\Events\KeyEvent.cpp" />
     <ClCompile Include="src\RaphEn\Events\MouseEvent.cpp" />
-    <ClCompile Include="src\RaphEn\Application.cpp" />
+    <ClCompile Include="src\RaphEn\Events\WindowEvent.cpp" />
     <ClCompile Include="src\RaphEn\Log.cpp" />
     <ClCompile Include="src\RaphEn\Profiler\Profiler.cpp" />
     <ClCompile Include="src\RaphEn\Profiler\ProfilerTimer.cpp" />
-    <ClCompile Include="src\RaphEn\Events\WindowEvent.cpp" />
+    <ClCompile Include="src\repch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

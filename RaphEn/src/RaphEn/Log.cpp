@@ -1,8 +1,7 @@
+#include "repch.h"
+
 #include "RaphEn/Log.h"
-#include <cstdarg>
-#include <iostream>
-#include <sstream>
-#include <ctime>
+
 
 namespace raphen {
 	namespace debug {
