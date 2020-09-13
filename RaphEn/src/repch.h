@@ -2,6 +2,10 @@
 
 // PRECOMPILED HEADER
 
+#ifdef RE_PLATFORM_WINDOWS
+#include <Windows.h>
+#endif //RE_PLATFORM_WINDOWS
+
 #include <algorithm>
 
 #include <mutex>

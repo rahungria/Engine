@@ -152,6 +152,7 @@ IF EXIST ..\bin\Dist-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy /Q
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\RaphEn\Memory\LinearAllocator.h" />
     <ClInclude Include="src\RaphEn\Application.h" />
     <ClInclude Include="src\RaphEn\Core\Core.h" />
     <ClInclude Include="src\RaphEn\Core\EventCore.h" />
@@ -165,6 +166,8 @@ IF EXIST ..\bin\Dist-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy /Q
     <ClInclude Include="src\RaphEn\Events\MouseEvent.h" />
     <ClInclude Include="src\RaphEn\Events\WindowEvent.h" />
     <ClInclude Include="src\RaphEn\Log.h" />
+    <ClInclude Include="src\RaphEn\Memory\MemoryAllocator.h" />
+    <ClInclude Include="src\RaphEn\Memory\StackAllocator.h" />
     <ClInclude Include="src\RaphEn\Profiler\ProfileResult.h" />
     <ClInclude Include="src\RaphEn\Profiler\Profiler.h" />
     <ClInclude Include="src\RaphEn\Profiler\ProfilerTimer.h" />
@@ -172,12 +175,14 @@ IF EXIST ..\bin\Dist-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy /Q
     <ClInclude Include="src\repch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\RaphEn\Memory\LinearAllocator.cpp" />
     <ClCompile Include="src\RaphEn\Application.cpp" />
     <ClCompile Include="src\RaphEn\Events\ApplicationEvent.cpp" />
     <ClCompile Include="src\RaphEn\Events\KeyEvent.cpp" />
     <ClCompile Include="src\RaphEn\Events\MouseEvent.cpp" />
     <ClCompile Include="src\RaphEn\Events\WindowEvent.cpp" />
     <ClCompile Include="src\RaphEn\Log.cpp" />
+    <ClCompile Include="src\RaphEn\Memory\StackAllocator.cpp" />
     <ClCompile Include="src\RaphEn\Profiler\Profiler.cpp" />
     <ClCompile Include="src\RaphEn\Profiler\ProfilerTimer.cpp" />
     <ClCompile Include="src\repch.cpp">

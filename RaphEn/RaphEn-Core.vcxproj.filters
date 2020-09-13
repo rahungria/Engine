@@ -65,6 +65,9 @@
     </ClInclude>
     <ClInclude Include="src\Raphen.h" />
     <ClInclude Include="src\repch.h" />
+    <ClInclude Include="src\RaphEn\Memory\StackAllocator.h" />
+    <ClInclude Include="src\RaphEn\Memory\MemoryAllocator.h" />
+    <ClInclude Include="src\RaphEn\Memory\LinearAllocator.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\RaphEn\Application.cpp">
@@ -92,5 +95,7 @@
       <Filter>RaphEn\Profiler</Filter>
     </ClCompile>
     <ClCompile Include="src\repch.cpp" />
+    <ClCompile Include="src\RaphEn\Memory\StackAllocator.cpp" />
+    <ClCompile Include="src\RaphEn\Memory\LinearAllocator.cpp" />
   </ItemGroup>
 </Project>
