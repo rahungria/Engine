@@ -5,8 +5,9 @@
 
 namespace raphen::memory
 {
-	// e
-	class RE_API LinearAllocator : public MemoryAllocator
+	// Linear allocator to use for single frame memory.
+	// Doesn't support freeing memory, as it will be reset at the end of every frame.
+	class RE_API LinearAllocator
 	{
 	public:
 
@@ -21,20 +22,20 @@ namespace raphen::memory
 		LinearAllocator(LinearAllocator&&) = delete;
 		LinearAllocator& operator = (const LinearAllocator&) = delete;
 
-		// Simply allocates a block of memory managed by the allocator. 
+		// Simply allocates a block of memory managed by the allocator.		
+		// To use call allocate as if it were malloc() then use placement new to call constructor of object at the right memory address
 		// (Allocation is just one pointer addition)
 		// @param size: size of the block in bytes
 		// @return pointer to block of data managed or nullptr if couldn't allocate
-		virtual void* allocate(size_t size) override;
-
-		// Stops managing the block
-		// (doesn't actually free the memory to the OS)
-		// @param ptr: ptr to block of data in the Allocator
-		virtual void free(void* ptr) override;
+		void* allocate(size_t size);
 
 		// Resets the entire block of memory
 		// memset(m_buffer, 0, m_buffer_size) maybe???
 		void reset();
+
+		// returns the aligned size 
+		// ex: align(3) = 8, align(15) = 16, align(32) = 32 ...
+		size_t align(const size_t size);
 
 	private:
 

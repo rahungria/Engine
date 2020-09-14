@@ -35,17 +35,17 @@ project "RaphEn-Core"
     postbuildmessage "Copying .dll dependencies"
 
     filter "configurations:Debug" 
-        defines "HZ_DEBUG"
+        defines "RE_DEBUG"
         runtime "Debug"
         symbols "On"
 
     filter "configurations:Release" 
-        defines "HZ_RELEASE"
+        defines "RE_RELEASE"
         runtime "Release"
         optimize "On"
 
     filter "configurations:Dist" 
-        defines "HZ_DIST"
+        defines "RE_DIST"
         runtime "Release"
         optimize "On"
 

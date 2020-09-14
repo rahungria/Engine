@@ -10,6 +10,9 @@
     <Filter Include="RaphEn\Events">
       <UniqueIdentifier>{E79DC617-535E-424E-1C99-8BCB8818872A}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RaphEn\Memory">
+      <UniqueIdentifier>{6BA94029-D769-BC5F-A0A4-05DD0C24013C}</UniqueIdentifier>
+    </Filter>
     <Filter Include="RaphEn\Profiler">
       <UniqueIdentifier>{15A08D2D-812B-FBF1-8A3C-7EE6F64657F2}</UniqueIdentifier>
     </Filter>
@@ -54,6 +57,15 @@
     <ClInclude Include="src\RaphEn\Log.h">
       <Filter>RaphEn</Filter>
     </ClInclude>
+    <ClInclude Include="src\RaphEn\Memory\LinearAllocator.h">
+      <Filter>RaphEn\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RaphEn\Memory\MemoryAllocator.h">
+      <Filter>RaphEn\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RaphEn\Memory\StackAllocator.h">
+      <Filter>RaphEn\Memory</Filter>
+    </ClInclude>
     <ClInclude Include="src\RaphEn\Profiler\ProfileResult.h">
       <Filter>RaphEn\Profiler</Filter>
     </ClInclude>
@@ -65,9 +77,6 @@
     </ClInclude>
     <ClInclude Include="src\Raphen.h" />
     <ClInclude Include="src\repch.h" />
-    <ClInclude Include="src\RaphEn\Memory\StackAllocator.h" />
-    <ClInclude Include="src\RaphEn\Memory\MemoryAllocator.h" />
-    <ClInclude Include="src\RaphEn\Memory\LinearAllocator.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\RaphEn\Application.cpp">
@@ -88,6 +97,12 @@
     <ClCompile Include="src\RaphEn\Log.cpp">
       <Filter>RaphEn</Filter>
     </ClCompile>
+    <ClCompile Include="src\RaphEn\Memory\LinearAllocator.cpp">
+      <Filter>RaphEn\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RaphEn\Memory\StackAllocator.cpp">
+      <Filter>RaphEn\Memory</Filter>
+    </ClCompile>
     <ClCompile Include="src\RaphEn\Profiler\Profiler.cpp">
       <Filter>RaphEn\Profiler</Filter>
     </ClCompile>
@@ -95,7 +110,5 @@
       <Filter>RaphEn\Profiler</Filter>
     </ClCompile>
     <ClCompile Include="src\repch.cpp" />
-    <ClCompile Include="src\RaphEn\Memory\StackAllocator.cpp" />
-    <ClCompile Include="src\RaphEn\Memory\LinearAllocator.cpp" />
   </ItemGroup>
 </Project>

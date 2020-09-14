@@ -79,7 +79,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>repch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>RE_BUILD_DLL;RE_PLATFORM_WINDOWS;HZ_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>RE_BUILD_DLL;RE_PLATFORM_WINDOWS;RE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
@@ -102,7 +102,7 @@ IF EXIST ..\bin\Debug-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy /
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>repch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>RE_BUILD_DLL;RE_PLATFORM_WINDOWS;HZ_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>RE_BUILD_DLL;RE_PLATFORM_WINDOWS;RE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -129,7 +129,7 @@ IF EXIST ..\bin\Release-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>repch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>RE_BUILD_DLL;RE_PLATFORM_WINDOWS;HZ_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>RE_BUILD_DLL;RE_PLATFORM_WINDOWS;RE_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -152,7 +152,6 @@ IF EXIST ..\bin\Dist-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy /Q
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\RaphEn\Memory\LinearAllocator.h" />
     <ClInclude Include="src\RaphEn\Application.h" />
     <ClInclude Include="src\RaphEn\Core\Core.h" />
     <ClInclude Include="src\RaphEn\Core\EventCore.h" />
@@ -166,6 +165,7 @@ IF EXIST ..\bin\Dist-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy /Q
     <ClInclude Include="src\RaphEn\Events\MouseEvent.h" />
     <ClInclude Include="src\RaphEn\Events\WindowEvent.h" />
     <ClInclude Include="src\RaphEn\Log.h" />
+    <ClInclude Include="src\RaphEn\Memory\LinearAllocator.h" />
     <ClInclude Include="src\RaphEn\Memory\MemoryAllocator.h" />
     <ClInclude Include="src\RaphEn\Memory\StackAllocator.h" />
     <ClInclude Include="src\RaphEn\Profiler\ProfileResult.h" />
@@ -175,13 +175,13 @@ IF EXIST ..\bin\Dist-windows-x86_64\$(ProjectName)\$(ProjectName).lib\ (xcopy /Q
     <ClInclude Include="src\repch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\RaphEn\Memory\LinearAllocator.cpp" />
     <ClCompile Include="src\RaphEn\Application.cpp" />
     <ClCompile Include="src\RaphEn\Events\ApplicationEvent.cpp" />
     <ClCompile Include="src\RaphEn\Events\KeyEvent.cpp" />
     <ClCompile Include="src\RaphEn\Events\MouseEvent.cpp" />
     <ClCompile Include="src\RaphEn\Events\WindowEvent.cpp" />
     <ClCompile Include="src\RaphEn\Log.cpp" />
+    <ClCompile Include="src\RaphEn\Memory\LinearAllocator.cpp" />
     <ClCompile Include="src\RaphEn\Memory\StackAllocator.cpp" />
     <ClCompile Include="src\RaphEn\Profiler\Profiler.cpp" />
     <ClCompile Include="src\RaphEn\Profiler\ProfilerTimer.cpp" />

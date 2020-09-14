@@ -23,13 +23,12 @@ namespace raphen::memory
 
 		m_max_buffer_size = size;
 
+		// Assertion maybe
 		if (!m_buffer)
 		{
 			//m_max_buffer_size = 0;
-			// assertion, log, something
 			std::cout << "Linear Allocator constructor failed malloc\n";
 		}
-		std::cout << "Linear Allocator @ " << m_buffer << std::endl;
 	}
 
 	LinearAllocator::~LinearAllocator()
@@ -46,23 +45,21 @@ namespace raphen::memory
 		void* buffer_block = nullptr;
 		size = align(size);
 
+		//replace with assert later
+#		ifdef RE_DEBUG
+		// maybe do the checking diferently if is expensive for hot code
 		if (size <= 0 || m_buffer_size + size > m_max_buffer_size)
 		{
 			//return null pointer 
 			return buffer_block;
 		}
+#		endif //RE_DEBUG
 
 		buffer_block = (char*)m_buffer + m_buffer_size;
 
 		m_buffer_size += size;
 
 		return buffer_block;
-	}
-
-	void LinearAllocator::free(void* ptr)
-	{
-		// maybe undefined behaviour
-		// shouldn't be called or used
 	}
 
 	void LinearAllocator::reset()
@@ -74,5 +71,10 @@ namespace raphen::memory
 
 		// maybe not needed?
 		memset(m_buffer, 0, m_max_buffer_size);
+	}
+
+	size_t LinearAllocator::align(const size_t size)
+	{
+		return (size + sizeof(void*) - 1) & ~(sizeof(void*) - 1);
 	}
 }
