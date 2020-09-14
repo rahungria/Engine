@@ -8,6 +8,12 @@
 	//Expect definition in application (instead of defining main)
 	extern raphen::Application* raphen::CreateApplication(void);
 
+	struct test
+	{
+		int a, b;
+		test(int a1, int b1) : a(a1), b(b1) {}
+	};
+
 	int main(int argc, char** argv) 
 	{
 		RE_PROFILE_BEGIN_SESSION("Startup", "Profile-Startup.json");

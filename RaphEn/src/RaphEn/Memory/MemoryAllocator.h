@@ -1,10 +1,12 @@
 #pragma once
 
+#include "RaphEn/Core/Core.h"
+
 namespace raphen::memory
 {
 
 	//Interface for every memory allocator designed (linear, stack, double stack ...)
-	class MemoryAllocator
+	class RE_API MemoryAllocator
 	{
 	public:
 		// Allocate bloack of memory in the Allocator managed memory
