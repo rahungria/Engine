@@ -6,6 +6,9 @@
 #include <Windows.h>
 #endif //RE_PLATFORM_WINDOWS
 
+#include<cstdlib>
+#include <cstdarg>
+
 #include <algorithm>
 
 #include <mutex>
@@ -19,5 +22,3 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-
-#include <cstdarg>

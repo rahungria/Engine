@@ -40,5 +40,3 @@ project "Sandbox"
     filter "configurations:Dist" 
         defines "HZ_DIST"
         optimize "On"
-
-    

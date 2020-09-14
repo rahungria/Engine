@@ -1,6 +1,5 @@
 #include "Raphen.h"
 #include "RaphEn/Core/EventCore.h"
-#include <string>
 
 class Sandbox : public raphen::Application {
 public:

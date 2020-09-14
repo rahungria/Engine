@@ -15,6 +15,7 @@ namespace raphen::memory
 		// @param stack_size: size of the memory the Linear Allocator manages in bytes
 		explicit LinearAllocator(size_t stack_size);
 
+		// Returns all the managed memory to the OS only uppon destruction
 		~LinearAllocator();
 
 		// No Copy or move constructors, or assignement

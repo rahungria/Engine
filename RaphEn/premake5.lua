@@ -48,5 +48,3 @@ project "RaphEn-Core"
         defines "RE_DIST"
         runtime "Release"
         optimize "On"
-
-    
