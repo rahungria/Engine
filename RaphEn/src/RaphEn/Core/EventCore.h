@@ -1,16 +1,16 @@
 #pragma once
 
-//#include "RaphEn/Core/Core.h"
-//#include "RaphEn/Events/ApplicationEvent.h"
-//#include "RaphEn/Events/Event.h"
-//#include "RaphEn/Events/EventDispatcher.h"
-//#include "Raphen/Events/KeyEvent.h"
-//#include "RaphEn/Events/MouseEvent.h"
-//#include "RaphEn/Events/WindowEvent.h"
+// #include "RaphEn/Core/Core.h"
+// #include "RaphEn/Events/ApplicationEvent.h"
+// #include "RaphEn/Events/EventDispatcher.h"
+// #include "RaphEn/Events/Event.h"
+// #include "Raphen/Events/KeyEvent.h"
+// #include "RaphEn/Events/MouseEvent.h"
+// #include "RaphEn/Events/WindowEvent.h"
 
-//namespace raphen::events {
+// namespace raphen::events {
 //
-//	//enum to differenciate and id different event types
+//	// enum to differenciate and id different event types
 //	enum class EventType
 //	{
 //		None = 0,

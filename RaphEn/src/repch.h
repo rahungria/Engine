@@ -1,20 +1,22 @@
+// Copyright 2019-2020 Raphael Hungria
 #pragma once
 
 // PRECOMPILED HEADER
 
 #ifdef RE_PLATFORM_WINDOWS
 #include <Windows.h>
-#endif //RE_PLATFORM_WINDOWS
+#endif  // RE_PLATFORM_WINDOWS
 
 #include<cstdlib>
 #include <cstdarg>
+#include <cstdint>
 
 #include <algorithm>
 
-#include <mutex>
-#include <thread>
+#include <mutex> //NOLINT (build/c++11)
+#include <thread> //NOLINT (build/c++11)
 
-#include <chrono>
+#include <chrono> //NOLINT (build/c++11)
 #include <ctime>
 
 #include <string>

@@ -1,6 +1,7 @@
+// Copyright 2019-2020 Raphael Hungria
 #pragma once
 
-//to be included by application only
+// to be included by application only
 
 #include "RaphEn/Application.h"
 #include "RaphEn/Log.h"

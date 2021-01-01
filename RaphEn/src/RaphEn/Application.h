@@ -1,17 +1,16 @@
+// Copyright 2019-2020 Raphael Hungria
 #pragma once
 #include "RaphEn/Core/Core.h"
 
+
 namespace raphen {
+class RE_API Application {
+ public:
+    virtual ~Application(void);
 
-	class RE_API Application
-	{
-	public:
-		virtual ~Application(void);
-		
-		void run(void);
-	};
+    void run(void);
+};
 
-	//to be defined in Client application (see entry point)
-	Application* CreateApplication(void);
-}
-
+// To be defined in Client application (project), see entry point
+Application* CreateApplication(void);
+}  // namespace raphen

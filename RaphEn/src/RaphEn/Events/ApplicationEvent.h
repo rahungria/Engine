@@ -1,51 +1,50 @@
+// Copyright 2019-2020 Raphael Hungria
 #pragma once
+
+#include <string>
 
 #include "RaphEn/Core/Core.h"
 #include "RaphEn/Events/EventType.h"
 #include "RaphEn/Events/Event.h"
 
-namespace raphen::events
-{
+namespace raphen::events {
 
-	class RE_API AppTickEvent : public Event
-	{
-	public:
-		AppTickEvent();
+class RE_API AppTickEvent : public Event {
+ public:
+    AppTickEvent();
 
-		std::string ToString() const override;
+    std::string ToString() const override;
 
-		static EventType GetStaticType();
-		virtual EventType GetEventType() const override;
-		virtual const char* GetName() const override;
+    static EventType GetStaticType();
+    EventType GetEventType() const override;
+    const char* GetName() const override;
 
-		virtual unsigned int GetCategoryFlags() const override;
-	};
+    unsigned int GetCategoryFlags() const override;
+};
 
-	class RE_API AppUpdateEvent : public Event
-	{
-	public:
-		AppUpdateEvent();
+class RE_API AppUpdateEvent : public Event {
+ public:
+    AppUpdateEvent();
 
-		std::string ToString() const override;
+    std::string ToString() const override;
 
-		static EventType GetStaticType();
-		virtual EventType GetEventType() const override;
-		virtual const char* GetName() const override;
+    static EventType GetStaticType();
+    EventType GetEventType() const override;
+    const char* GetName() const override;
 
-		virtual unsigned int GetCategoryFlags() const override;
-	};
+    unsigned int GetCategoryFlags() const override;
+};
 
-	class RE_API AppRenderEvent : public Event
-	{
-	public:
-		AppRenderEvent();
+class RE_API AppRenderEvent : public Event {
+ public:
+    AppRenderEvent();
 
-		std::string ToString() const override;
+    std::string ToString() const override;
 
-		static EventType GetStaticType();
-		virtual EventType GetEventType() const override;
-		virtual const char* GetName() const override;
+    static EventType GetStaticType();
+    EventType GetEventType() const override;
+    const char* GetName() const override;
 
-		virtual unsigned int GetCategoryFlags() const override;
-	};
-}
+    unsigned int GetCategoryFlags() const override;
+};
+}  // namespace raphen::events
