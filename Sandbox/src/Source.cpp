@@ -1,6 +1,5 @@
 // Copyright 2019-2020 Raphael Hungria
 #include "Raphen.h"
-#include "RaphEn/Core/EventCore.h"
 
 class Sandbox : public raphen::Application {
  public:
