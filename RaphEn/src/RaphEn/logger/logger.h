@@ -5,9 +5,8 @@
 
 
 namespace raphen::logger {
-enum class priority {
-    DEBUG, INFO, WARN, ERRO, FATAL
-};
-class Logger {    
-};
+
+int return2() {
+    return 2;
+}
 }  // namespace raphen::logger

@@ -1,5 +1,5 @@
-project "Sandbox"
-    kind "ConsoleApp"
+project "RETests"
+    kind "SharedLib"
     language "C++"
     cppdialect "C++17"
     staticruntime "On"
@@ -8,20 +8,24 @@ project "Sandbox"
     objdir ("../bin-int/" .. out_dir .. "/%{prj.name}")
 
     files {
-        "src/**.h",
-        "src/**.cpp"
+        "tests/**.h",
+        "tests/**.cpp"
     }
 
     includedirs {
-        "src",
+        "tests",
         "../RaphEn/src"
     }
 
-    links {
-        "RaphEn-Core"
+    libdirs {
+        "../bin/" .. out_dir .. "/RaphEn-Core"
     }
 
     filter "system:windows"
+
+    -- buildoptions {
+    --     "//DYNAMICBASE RaphEn-Core.lib"
+    -- }
 
     systemversion "latest"
 
@@ -31,12 +35,15 @@ project "Sandbox"
 
     filter "configurations:Debug" 
         defines "RE_DEBUG"
+        runtime "Debug"
         symbols "On"
 
     filter "configurations:Release" 
         defines "RE_RELEASE"
+        runtime "Release"
         optimize "On"
 
     filter "configurations:Dist" 
         defines "RE_DIST"
+        runtime "Release"
         optimize "On"

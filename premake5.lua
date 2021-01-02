@@ -14,3 +14,4 @@ group ""
 
 include ("RaphEn/premake5.lua")
 include ("Sandbox/premake5.lua")
+include ("RETests/premake5.lua")
