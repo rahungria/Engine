@@ -3,10 +3,10 @@
 
 // to be included by application only
 
-#include "RaphEn/Application.h"
-#include "RaphEn/Log.h"
-#include "RaphEn/Core/ProfilerCore.h"
+#include "RaphEn/application.h"
+#include "RaphEn/logger/log.h"
+#include "RaphEn/general/profiler_core.h"
 
 // --------- ENTRY POINT ---------------
-#include "RaphEn/EntryPoint.h"
+#include "RaphEn/entry_point.h"
 // --------- ENTRY POINT ---------------

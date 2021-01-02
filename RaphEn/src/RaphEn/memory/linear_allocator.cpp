@@ -1,8 +1,8 @@
 // Copyright 2019-2020 Raphael Hungria
 #include "repch.h"
 
-#include "RaphEn/Memory/LinearAllocator.h"
-#include "RaphEn/Core/ProfilerCore.h"
+#include "RaphEn/memory/linear_allocator.h"
+#include "RaphEn/general/profiler_core.h"
 
 namespace raphen::memory {
 LinearAllocator::LinearAllocator(size_t size)

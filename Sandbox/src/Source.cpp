@@ -1,5 +1,5 @@
 // Copyright 2019-2020 Raphael Hungria
-#include "Raphen.h"
+#include "raphen.h"
 
 class Sandbox : public raphen::Application {
  public:
@@ -17,6 +17,6 @@ class Sandbox : public raphen::Application {
 
 raphen::Application* raphen::CreateApplication() {
     // raphen::events::WindowResizeEvent evnt(400, 500);
-    raphen::debug::Log("debug log", raphen::debug::channels::RENDERING);
+    raphen::logger::Log("debug log", raphen::logger::channels::RENDERING);
     return new Sandbox;
 }

@@ -3,8 +3,8 @@
 
 #include "repch.h"
 
-#include "RaphEn/Profiler/ProfilerTimer.h"
-#include "RaphEn/Profiler/Profiler.h"
+#include "RaphEn/profiler//profiler_timer.h"
+#include "RaphEn/profiler/profiler.h"
 
 namespace raphen::debug {
 ProfilerTimer::ProfilerTimer(const char* name) :

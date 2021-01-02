@@ -1,8 +1,8 @@
 // Copyright 2019-2020 Raphael Hungria
 #pragma once
 
-#include "RaphEn/Core/Core.h"
-#include "RaphEn/Core/ProfilerCore.h"
+#include "RaphEn/general/core.h"
+#include "RaphEn/general/profiler_core.h"
 
 
 #ifdef RE_PLATFORM_WINDOWS

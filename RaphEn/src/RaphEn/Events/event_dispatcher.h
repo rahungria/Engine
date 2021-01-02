@@ -1,7 +1,7 @@
 // Copyright 2019-2020 Raphael Hungria
 #pragma once
 
-#include "RaphEn/Events/Event.h"
+#include "RaphEn/events/event.h"
 
 namespace raphen::events {
 // Pseudo Functor

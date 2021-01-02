@@ -3,8 +3,8 @@
 
 #include "repch.h"
 
-#include "RaphEn/Events/ApplicationEvent.h"
-#include "RaphEn/Events/EventType.h"
+#include "RaphEn/events/application_event.h"
+#include "RaphEn/events/event_type.h"
 
 
 

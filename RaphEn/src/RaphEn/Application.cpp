@@ -1,8 +1,8 @@
 // Copyright 2019-2020 Raphael Hungria
 #include "repch.h"
 
-#include "RaphEn/Application.h"
-#include "RaphEn/Core/ProfilerCore.h"
+#include "RaphEn/application.h"
+#include "RaphEn/general/profiler_core.h"
 
 
 namespace raphen {

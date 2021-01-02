@@ -3,8 +3,8 @@
 
 #include <string>
 
-#include "RaphEn/Core/Core.h"
-#include "RaphEn/Events/EventType.h"
+#include "RaphEn/general/core.h"
+#include "RaphEn/events/event_type.h"
 
 namespace raphen::events {
 // Base Abstract class for every system event

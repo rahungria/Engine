@@ -1,9 +1,9 @@
 // Copyright 2019-2020 Raphael Hungria
 #include "repch.h"
 
-#include "RaphEn/Profiler/Profiler.h"
-#include "RaphEn/Log.h"
-#include "RaphEn/Profiler/ProfileResult.h"
+#include "RaphEn/profiler/profiler.h"
+#include "RaphEn/logger/log.h"
+#include "RaphEn/profiler/profile_result.h"
 
 namespace raphen::debug {
     void Profiler::BeginSession

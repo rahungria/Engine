@@ -3,8 +3,8 @@
 
 #include "repch.h"
 
-#include "RaphEn/Events/MouseEvent.h"
-#include "RaphEn/Events/EventType.h"
+#include "RaphEn/events/mouse_event.h"
+#include "RaphEn/events/event_type.h"
 
 namespace raphen::events {
 // --------------- MOUSE EVENT -----------------------

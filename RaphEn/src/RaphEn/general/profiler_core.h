@@ -15,8 +15,8 @@
 // a PROFILE_FUNCTION() definition for full function signature name
 // or a PROFILE_SCOPE(name) to profile a single scope with a custom name
 #pragma once
-#include "RaphEn/Profiler/Profiler.h"
-#include "RaphEn/Profiler/ProfilerTimer.h"
+#include "RaphEn/profiler/profiler.h"
+#include "RaphEn/profiler//profiler_timer.h"
 
 
 #if RE_DEBUG

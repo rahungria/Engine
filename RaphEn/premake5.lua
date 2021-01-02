@@ -16,7 +16,7 @@ project "RaphEn-Core"
     }
 
     includedirs {
-        "src"
+        "src",
     }
 
     filter "system:windows"

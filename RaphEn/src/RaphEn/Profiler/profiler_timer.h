@@ -5,7 +5,7 @@
 
 #include "repch.h"
 
-#include "RaphEn/Core/Core.h"
+#include "RaphEn/general/core.h"
 
 namespace raphen::debug {
 // Class instantiated by debug macros

@@ -1,7 +1,7 @@
 // Copyright 2019-2020 Raphael Hungria
 #include "repch.h"
 
-#include "RaphEn/Memory/StackAllocator.h"
+#include "RaphEn/memory/stack_allocator.h"
 
 namespace raphen::memory {
 StackAllocator::StackAllocator(size_t size) {

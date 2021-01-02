@@ -5,12 +5,12 @@
 #include <fstream>
 #include <mutex> //NOLINT (build/c++11)
 
-#include "RaphEn/Profiler/ProfileResult.h"
-#include "RaphEn/Profiler/ProfilerTimer.h"
-#include "RaphEn/Core/Core.h"
+#include "RaphEn/profiler/profile_result.h"
+#include "RaphEn/profiler//profiler_timer.h"
+#include "RaphEn/general/core.h"
 
 namespace raphen::debug {
-// Profiler Singleton accessed only through the macros at ProfilerCore.h
+// Profiler Singleton accessed only through the macros at Profilercore.h
 class Profiler {
  private:
     std::string m_current_session;

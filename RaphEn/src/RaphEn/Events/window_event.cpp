@@ -3,8 +3,8 @@
 
 #include "repch.h"
 
-#include "RaphEn/Events/WindowEvent.h"
-#include "RaphEn/Events/EventType.h"
+#include "RaphEn/events/window_event.h"
+#include "RaphEn/events/event_type.h"
 
 namespace raphen::events {
 // --------------- WINDOW RESIZE VENT -----------------------

@@ -1,11 +1,10 @@
 // Copyright 2019-2020 Raphael Hungria
 #pragma once
 
-#include "RaphEn/Memory/MemoryAllocator.h"
 
 namespace raphen::memory {
 // TODO(rapha): Implement a simple stack allocator (not OS-like...)
-class StackAllocator : public MemoryAllocator {
+class StackAllocator {
  public:
     // Allocates a big block on the heap on construction
     // @param stack_size: size of the memory the Stack Allocator manages

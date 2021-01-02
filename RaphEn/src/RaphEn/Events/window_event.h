@@ -3,9 +3,9 @@
 
 #pragma once
 
-#include "RaphEn/Core/Core.h"
-#include "RaphEn/Events/Event.h"
-#include "RaphEn/Events/EventType.h"
+#include "RaphEn/general/core.h"
+#include "RaphEn/events/event.h"
+#include "RaphEn/events/event_type.h"
 
 namespace raphen::events {
 enum class EventType;

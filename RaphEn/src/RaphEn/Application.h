@@ -1,6 +1,6 @@
 // Copyright 2019-2020 Raphael Hungria
 #pragma once
-#include "RaphEn/Core/Core.h"
+#include "RaphEn/general/core.h"
 
 
 namespace raphen {

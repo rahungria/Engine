@@ -3,7 +3,7 @@
 
 #include "repch.h"
 
-#include "RaphEn/Events/KeyEvent.h"
+#include "RaphEn/events/key_event.h"
 
 
 namespace raphen::events {
