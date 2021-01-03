@@ -7,16 +7,9 @@ class Sandbox : public raphen::Application {
     ~Sandbox(void) {}
 };
 
-// replaced by entry point header
-// int main(void) {
-//    Sandbox* sandbox = new Sandbox();
-//    sandbox->run();
-//
-//    delete sandbox;
-//}
 
 raphen::Application* raphen::CreateApplication() {
     // raphen::events::WindowResizeEvent evnt(400, 500);
-    raphen::logger::Log("debug log", raphen::logger::channels::RENDERING);
+    // raphen::logger::Log("debug log", raphen::logger::channels::RENDERING);
     return new Sandbox;
 }

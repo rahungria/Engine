@@ -33,8 +33,9 @@ project "RETests"
         "RE_PLATFORM_WINDOWS"
     }
 
-    filter "configurations:Debug" 
-        defines "RE_DEBUG"
+    filter "configurations:Debug"
+        -- not 'RE_DEBUG' to not crash normally profiled functions
+        defines "RE_TEST"
         runtime "Debug"
         symbols "On"
 
@@ -42,8 +43,9 @@ project "RETests"
         defines "RE_RELEASE"
         runtime "Release"
         optimize "On"
-
-    filter "configurations:Dist" 
-        defines "RE_DIST"
-        runtime "Release"
-        optimize "On"
+    
+    -- not supported in dist
+    -- filter "configurations:Dist" 
+    --     defines "RE_DIST"
+    --     runtime "Release"
+    --     optimize "On"

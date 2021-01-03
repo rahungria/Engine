@@ -4,17 +4,20 @@
 #include "RaphEn/memory/linear_allocator.h"
 #include "RaphEn/general/profiler_core.h"
 
+using std::size_t;
+
+
 namespace raphen::memory {
 LinearAllocator::LinearAllocator(size_t size)
-    : m_buffer_size(0), m_max_buffer_size(0) {
+    : m_buffer_size(0), m_max_buffer_size(0), m_buffer(nullptr) {
     PROFILE_FUNCTION();
 
-    if (size <= 0) {
-        m_buffer = nullptr;
+    size = align(size);
+
+    if (size == 0) {
+        // TODO(rapha): Log error, assert, etc
         return;
     }
-
-    size = align(size);
 
     m_buffer = malloc(size);
     m_buffer_size = 0;
@@ -67,7 +70,12 @@ void LinearAllocator::reset() {
 }
 
 size_t LinearAllocator::align(const size_t size) {
+
+    // TODO: replace with assertion
+    // should crash, throw exception or at least log...
+    if (size > MAX_BLOCK_SIZE) {
+        return (size_t)0;
+    }
     return (size + sizeof(void*) - 1) & ~(sizeof(void*) - 1);
 }
 }  // namespace raphen::memory
-

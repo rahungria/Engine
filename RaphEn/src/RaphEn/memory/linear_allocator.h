@@ -3,13 +3,23 @@
 
 #include "RaphEn/general/core.h"
 
+using std::size_t;
+
+
 namespace raphen::memory {
+
+// TODO: change this to a more common location for this namespace
+// Maximum memory block size (500MB)
+constexpr size_t MAX_BLOCK_SIZE = 1024 * 1024 * 50;
+
 // Linear allocator to use for single frame memory.
 // Doesn't support freeing memory, as it will be reset
 // at the end of every frame.
 class RE_API LinearAllocator {
  public:
-    // Allocates a big block of memory on the heap on construction
+    // Allocates a big block of memory on the heap on construction.
+    // ALL MEMORY MUST BE MANAGED MANUALY.
+    // EVERY OBJECT INSTANTIATED MUST CALL ITS OWN DESTRUCTOR MANUALY
     // @param stack_size: size of the memory the Linear Allocator
     // manages in bytes
     explicit LinearAllocator(size_t stack_size);
@@ -30,8 +40,10 @@ class RE_API LinearAllocator {
     // @return pointer to block of data managed or nullptr if couldn't allocate
     void* allocate(size_t size);
 
-    // Resets the entire block of memory
-    // memset(m_buffer, 0, m_buffer_size) maybe???
+    // Resets the entire block of memory.
+    // After the memory is reset, the code must NEVER attempt to access
+    // any data that was previously in it, or delete it.
+    // Instead just allocate memory again.
     void reset();
 
     // returns the aligned size
