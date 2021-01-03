@@ -14,11 +14,16 @@ project "RETests"
 
     includedirs {
         "tests",
-        "../RaphEn/src"
+        "../RaphEn/lib"
     }
 
     libdirs {
         "../bin/" .. out_dir .. "/RaphEn-Core"
+    }
+
+    -- may not work...
+    links {
+        "RaphEn"
     }
 
     filter "system:windows"

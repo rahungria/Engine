@@ -8,15 +8,17 @@ project "RaphEn-Core"
     objdir ("../bin-int/" .. out_dir .. "/%{prj.name}")
 
     pchheader "repch.h"
-    pchsource "src/repch.cpp"
+    pchsource "lib/repch.cpp"
 
     files {
-        "src/**.h",
-        "src/**.cpp"
+        "lib/**.h",
+        "lib/**.cpp",
+        "include/**.h"
     }
 
     includedirs {
-        "src",
+        "lib",
+        "include"
     }
 
     filter "system:windows"
