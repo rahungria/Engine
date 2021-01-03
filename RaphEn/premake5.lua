@@ -1,4 +1,4 @@
-project "RaphEn-Core"
+project "RaphEn"
     kind "SharedLib"
     language "C++"
     cppdialect "C++17"

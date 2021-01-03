@@ -18,7 +18,7 @@ project "Sandbox"
     }
 
     links {
-        "RaphEn-Core"
+        "RaphEn"
     }
 
     filter "system:windows"

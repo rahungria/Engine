@@ -18,19 +18,14 @@ project "RETests"
     }
 
     libdirs {
-        "../bin/" .. out_dir .. "/RaphEn-Core"
-    }
-
-    -- may not work...
-    links {
-        "RaphEn"
+        "../bin/" .. out_dir .. "/RaphEn"
     }
 
     filter "system:windows"
 
-    -- buildoptions {
-    --     "//DYNAMICBASE RaphEn-Core.lib"
-    -- }
+    linkoptions {
+        "/DYNAMICBASE RaphEn.lib"
+    }
 
     systemversion "latest"
 
