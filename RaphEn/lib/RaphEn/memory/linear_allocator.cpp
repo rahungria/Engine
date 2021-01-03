@@ -70,7 +70,6 @@ void LinearAllocator::reset() {
 }
 
 size_t LinearAllocator::align(const size_t size) {
-
     // TODO: replace with assertion
     // should crash, throw exception or at least log...
     if (size > MAX_BLOCK_SIZE) {

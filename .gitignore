@@ -358,6 +358,3 @@ MigrationBackup/
 
 # visual lint generated lint files
 .visuallint
-
-# extra git features
-.gitmodules
