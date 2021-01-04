@@ -14,7 +14,8 @@ project "Sandbox"
 
     includedirs {
         "src",
-        "../RaphEn/lib"  -- eventualy replace with 'include'
+        "../RaphEn/lib",  -- eventualy replace with 'include'
+        "../RaphEn/include",
     }
 
     links {

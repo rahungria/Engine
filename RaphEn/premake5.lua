@@ -34,7 +34,8 @@ project "RaphEn"
         "{COPY} %{cfg.buildtarget.relpath} ../bin/" .. out_dir .. "/Sandbox/",
         "{COPY} ../bin/" .. out_dir ..  "/%{prj.name}/%{prj.name}.lib ../bin/" .. out_dir .. "/Sandbox/",
         "{COPY} %{cfg.buildtarget.relpath} ../bin/" .. out_dir .. "/RETests/",
-        "{COPY} ../bin/" .. out_dir ..  "/%{prj.name}/%{prj.name}.lib ../bin/" .. out_dir .. "/RETests/"
+        -- maybe the tests don't need another reference to the .lib
+        -- "{COPY} ../bin/" .. out_dir ..  "/%{prj.name}/%{prj.name}.lib ../bin/" .. out_dir .. "/RETests/"
     }
     postbuildmessage "Copying .dll dependencies to Sandbox and RETests"
 

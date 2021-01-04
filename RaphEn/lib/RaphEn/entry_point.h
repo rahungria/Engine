@@ -16,7 +16,7 @@
         RE_PROFILE_END_SESSION();
 
         // TODO(rapha): profile in more depth when possible
-        RE_PROFILE_BEGIN_SESSION("App Loop", "Profile-AppLoop.json");
+        RE_PROFILE_BEGIN_SESSION("App_Loop", "Profile-AppLoop.json");
         app->run();
         RE_PROFILE_END_SESSION();
 

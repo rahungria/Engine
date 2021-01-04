@@ -28,7 +28,7 @@ std::string getFormatedLocalTime() {
     return std::string(buffer);
 }
 
-void RE_API Log(const char* msg, const channels& channel) {
+void RE_API Log(const char* msg, const Channels& channel) {
     time_t now = time(0);
     tm ltm;
 
@@ -44,7 +44,7 @@ void RE_API Log(const char* msg, const channels& channel) {
 }
 
 template<typename T>
-void log_internal(const T& msg, const channels& channel) {
+void log_internal(const T& msg, const Channels& channel) {
     time_t now = time(0);
     tm ltm;
 

@@ -30,7 +30,8 @@ class RE_API LinearAllocator {
     // No Copy or move constructors, or assignement
     LinearAllocator(const LinearAllocator&) = delete;
     LinearAllocator(LinearAllocator&&) = delete;
-    LinearAllocator& operator = (const LinearAllocator&) = delete;
+    LinearAllocator& operator=(const LinearAllocator&) = delete;
+    LinearAllocator& operator=(LinearAllocator&&) = delete;
 
     // Simply allocates a block of memory managed by the allocator.
     // To use call allocate as if it were malloc() then use placement new to

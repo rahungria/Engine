@@ -40,7 +40,7 @@ project "RETests"
         symbols "On"
 
     filter "configurations:Release" 
-        defines "RE_RELEASE"
+        defines "RE_TEST"
         runtime "Release"
         optimize "On"
     

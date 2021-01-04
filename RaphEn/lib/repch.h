@@ -7,9 +7,10 @@
 #include <Windows.h>
 #endif  // RE_PLATFORM_WINDOWS
 
-#include<cstdlib>
+#include <cstdlib>
 #include <cstdarg>
 #include <cstdint>
+#include <cstddef>
 
 #include <algorithm>
 
