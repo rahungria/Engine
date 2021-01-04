@@ -14,7 +14,7 @@ project "RETests"
 
     includedirs {
         "tests",
-        "../RaphEn/lib"
+        "../RaphEn/include"
     }
 
     libdirs {

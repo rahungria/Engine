@@ -8,13 +8,13 @@ project "Sandbox"
     objdir ("../bin-int/" .. out_dir .. "/%{prj.name}")
 
     files {
-        "src/**.h",
+        "src/**.h",  -- eventualy replace
         "src/**.cpp"
     }
 
     includedirs {
-        "src",
-        "../RaphEn/lib",  -- eventualy replace with 'include'
+        "src",  -- eventualy make include
+        -- "../RaphEn/lib",
         "../RaphEn/include",
     }
 

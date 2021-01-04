@@ -11,13 +11,13 @@ project "RaphEn"
     pchsource "lib/repch.cpp"
 
     files {
-        "lib/**.h",
+        -- "lib/**.h",
         "lib/**.cpp",
-        "include/**.h"
+        -- "include/**.h"
     }
 
     includedirs {
-        "lib",
+        -- "lib",
         "include"
     }
 
